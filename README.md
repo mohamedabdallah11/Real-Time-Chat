@@ -92,6 +92,16 @@ resources/views/chat.blade.php      # Chat interface
 - **Responsive**: Works on all devices
 - **Real-time**: Instant message delivery
 
+
+🔔 Notifications
+-Real-time toast notifications using Laravel Events, Laravel Echo, and Pusher.
+
+-Notifications appear at the top center of the screen with smooth animation.
+
+-Triggered when a new message is received from another user.
+
+-Styled using Tailwind CSS with custom icons.
+
 ## 🐛 Troubleshooting
 
 **Messages not appearing?**
