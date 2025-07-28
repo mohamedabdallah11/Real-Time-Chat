@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MessageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,4 +29,12 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+
+
+
+Route::middleware('auth')->group(function () {
+    Route::get('/realtime', function () {return view('realtime');})->name('realtime');
+    Route::post('/send-message', [MessageController::class, 'send']);
+});
+
+require __DIR__ . '/auth.php';
